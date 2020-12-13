@@ -1,0 +1,79 @@
+html,
+ body {
+   /*margin: 0;
+   padding: 0;*/
+   background: url(garbhagudi.jpg)no-repeat center center;
+
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+ }
+ /*user-select: none;*/
+ /*background: url(bg.jpg);*/
+ #cupboard {
+   height: 733px;
+   width: 436px;
+   position: absolute;
+  left: 50%;
+  top: 50%;
+   
+  transform: translate(-50%, -50%);
+
+   perspective: 500;
+   /*background: url(bg.jpeg);*/
+   background-position: center center;
+   background-size: 95%;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+
+ }
+ #cupboard img {
+position: absolute;
+  margin:auto;
+  overflow: hidden;
+   height: 733px;
+   width: 436px;
+   float: center;
+ }
+ #cupboard .door#left {
+   zoom: .6;
+   position: absolute;
+   width: 375px;
+   height: 100%;
+   background-image: url(ld.png);
+   transition: transform 6s ease;
+   transform: rotateY(0);
+ }
+ #cupboard .door#right {
+   zoom: .6;
+   position: absolute;
+   width: 375px;
+   height: 100%;
+   background-image: url(rd.png);
+   transition: transform 9s ease;
+   transform: rotateY(0);
+ }
+ #cupboard .door#left {
+   transform-origin: top left;
+   left: 0;
+ }
+ #cupboard .door#right {
+   transform-origin: top right;
+   right: 0;
+ }
+ #cupboard:hover #left,
+ #cupboard.hover #left {
+
+   -webkit-transform: rotateY(-90deg);
+   transform: rotateY(-90deg);
+ }
+ #cupboard:hover #right,
+ #cupboard.hover #right {
+   -webkit-transform: rotateY(90deg);
+   transform: rotateY(90deg);
+ }
+
+iframe {
+    border: none;
+}

@@ -1,0 +1,59 @@
+<html>
+
+<head>
+  <script src="jquery-latest.js"></script>
+  <link rel="stylesheet" type="text/css" href="style1.css">
+</head>
+<audio id="mySoundClip" src="sdptmundkursong.mp3" allow="autoplay" loop="loop"></source>
+</audio>
+<h2><font color="green">Press Exit to <font color="red"><b>Skip</b></font> </font>  </h2>
+
+<body>
+  <div id="cupboard" style="padding-top:50px padding-bottom:50px ">
+    <a href="#">
+      <img src="godess.jpeg" alt="godess" />
+    </a>
+    
+
+    <div class="door" id="left"><h1 align="center" style="padding-top:190% "><h1 align="center"><b>Keep pressing<br>Here<br>To Open Doors</b></h1></div>
+    
+    <div class="door" id="right"></div>
+  </div>
+</body>
+
+
+
+<script type="text/javascript">
+
+ $(document).ready(function() {
+      $("#cupboard").on("touchstart", function(e) {
+        $(this).addClass("hover");
+        
+        e.preventDefault();
+      });
+
+      $("body").on("touchend", function(e) {
+        $("#cupboard").removeClass("hover");
+
+   
+      });
+
+
+
+
+
+    });  
+document.addEventListener('click', musicPlay);
+function musicPlay() {
+    document.getElementById('mySoundClip').play();
+    document.removeEventListener('click', musicPlay);
+
+
+}
+</script>
+
+
+
+
+
+</html>
