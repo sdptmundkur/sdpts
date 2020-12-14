@@ -1483,7 +1483,14 @@ function musicPlay() {
 }
 }
 
-
+var stopAllYouTubeVideos = () => { 
+  var iframes = document.querySelectorAll('iframe');
+  Array.prototype.forEach.call(iframes, iframe => { 
+    iframe.contentWindow.postMessage(JSON.stringify({ event: 'command', 
+  func: 'stopVideo' }), '*');
+ });
+}
+stopAllYouTubeVideos();
 
 
     </script>
